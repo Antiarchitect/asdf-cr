@@ -30,7 +30,7 @@ install_cr() {
 
 get_filename() {
     local platform="$1"
-    local version="$2"
+    local version="$(echo "$2" | awk '{ print substr($1,2) }')"
 
     echo "chart-releaser_${version}_${platform}.tar.gz"
 }
@@ -39,7 +39,7 @@ get_download_url() {
   local version="$1"
   local platform="$2"
   local filename="$(get_filename ${platform} ${version})"
-  echo "https://github.com/helm/chart-releaser/releases/download/v${version}/${filename}"
+  echo "https://github.com/helm/chart-releaser/releases/download/${version}/${filename}"
 }
 
 install_cr $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
