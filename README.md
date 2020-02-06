@@ -1,4 +1,4 @@
-# asdf-kops
+# asdf-cr
 
 [![Build Status](https://travis-ci.org/Antiarchitect/asdf-cr.svg?branch=master)](https://travis-ci.org/Antiarchitect/asdf-cr)
 
