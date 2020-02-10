@@ -9,7 +9,7 @@ install_helm_cr() {
   local install_path=$3
   local platform="$(uname | tr '[:upper:]' '[:lower:]')_amd64"
   local bin_install_path="$install_path/bin"
-  local binary_path="$bin_install_path/cr"
+  local binary_path="$bin_install_path/helm-cr"
   local download_url=$(get_download_url $version $platform)
 
   if [ "$TMPDIR" = "" ]; then
@@ -33,7 +33,7 @@ install_helm_cr() {
 
   echo "Copying binary"
   tar -zxf ${download_path} --directory $tmp_download_dir
-  cp ${tmp_download_dir}/cr ${bin_install_path}
+  cp ${tmp_download_dir}/cr ${bin_install_path}/helm-cr
 
   chmod +x ${binary_path}
 }
