@@ -3,17 +3,17 @@
 set -e
 set -o pipefail
 
-install_cr() {
+install_helm_cr() {
   local install_type=$1
   local version=$2
   local install_path=$3
   local platform="$(uname | tr '[:upper:]' '[:lower:]')_amd64"
   local bin_install_path="$install_path/bin"
-  local binary_path="$bin_install_path/cr"
+  local binary_path="$bin_install_path/helm-cr"
   local download_url=$(get_download_url $version $platform)
 
   if [ "$TMPDIR" = "" ]; then
-    local tmp_download_dir=$(mktemp -d -t cr_XXXXXX)
+    local tmp_download_dir=$(mktemp -d -t helm_cr_XXXXXX)
   else
     local tmp_download_dir=$TMPDIR
   fi
@@ -52,4 +52,4 @@ get_download_url() {
   echo "https://github.com/helm/chart-releaser/releases/download/v${version}/${filename}"
 }
 
-install_cr $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
+install_helm_cr $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
