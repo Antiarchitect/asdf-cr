@@ -7,7 +7,7 @@
 ## Install
 
 ```
-asdf plugin-add cr https://github.com/Antiarchitect/asdf-helm-cr.git
+asdf plugin-add helm-cr https://github.com/Antiarchitect/asdf-helm-cr.git
 ```
 
 ## Use
