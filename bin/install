@@ -9,7 +9,7 @@ install_helm_cr() {
   local install_path=$3
   local platform="$(uname | tr '[:upper:]' '[:lower:]')_amd64"
   local bin_install_path="$install_path/bin"
-  local binary_path="$bin_install_path/helm-cr"
+  local binary_path="$bin_install_path/cr"
   local download_url=$(get_download_url $version $platform)
 
   if [ "$TMPDIR" = "" ]; then
