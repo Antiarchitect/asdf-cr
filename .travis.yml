@@ -1,9 +1,0 @@
-language: c
-os:
-  - linux
-  - osx
-before_script:
-  - git clone https://github.com/asdf-vm/asdf.git
-  - . asdf/asdf.sh
-script:
-  - asdf plugin-test cr https://github.com/Antiarchitect/asdf-helm-cr.git
