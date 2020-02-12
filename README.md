@@ -1,6 +1,6 @@
 # asdf-helm-cr
 
-![Main workflow](https://github.com/Antiarchitect/asdf-helm-cr/workflows/Main%20workflow/badge.svg)
+[![Main workflow](https://github.com/Antiarchitect/asdf-helm-cr/workflows/Main%20workflow/badge.svg)](https://github.com/Antiarchitect/asdf-helm-cr/actions)
 
 [Helm Chart Releaser](https://github.com/helm/chart-releaser) plugin for [asdf](https://github.com/asdf-vm/asdf) version manager.
 
